@@ -12,9 +12,11 @@ def input_data_size():
     path = '/home/alexeyprats/ds_bootcamp/ds-phase-0/learning/datasets/tips.csv'
     tips = pd.read_csv(path, index_col=0)
     data_size = st.sidebar.slider("Размер датасета %", 0, 100, 80)
+    rand_option = st.sidebar.checkbox("Случайная выборка")
     len_data = len(tips) * data_size // 100
-    tips = tips.iloc[:len_data]
-    return tips
+    if rand_option:
+        return tips.sample(len_data)
+    return tips.iloc[:len_data]
 tips = input_data_size()
 st.write("""
 # Гистограмма total_bill
