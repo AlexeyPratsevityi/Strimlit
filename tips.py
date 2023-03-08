@@ -7,7 +7,7 @@ import statsmodels # для линии тренда
 st.sidebar.header('Размер датасета')
 
 def input_data_size():
-    path = 'tips_data.csv'
+    path = 'tips.csv'
     tips = pd.read_csv(path, index_col=0)
     data_size = st.sidebar.slider("Размер датасета %", 0, 100, 80)
     rand_option = st.sidebar.checkbox("Случайная выборка")
