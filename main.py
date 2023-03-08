@@ -6,7 +6,7 @@ import mplfinance as mpf
 
 
 st.write("""
-#  Японския свечная диаграма для Apple Inc. Цена на акции c 30. 01 2022.
+#  Японская свечная диаграма для Apple Inc. Цена на акции c 30. 01 2022.
 (идея  нагло украдена у https://github.com/danchenkoEgor)
 """)
 
