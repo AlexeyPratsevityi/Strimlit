@@ -3,13 +3,11 @@ import seaborn as sns
 import streamlit as st
 import plotly.express as px
 import statsmodels # для линии тренда
-import matplotlib.pyplot as plt
-
 
 st.sidebar.header('Размер датасета')
 
 def input_data_size():
-    path = '/home/alexeyprats/ds_bootcamp/ds-phase-0/learning/datasets/tips.csv'
+    path = 'tips_data.csv'
     tips = pd.read_csv(path, index_col=0)
     data_size = st.sidebar.slider("Размер датасета %", 0, 100, 80)
     rand_option = st.sidebar.checkbox("Случайная выборка")
