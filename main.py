@@ -4,9 +4,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mplfinance as mpf
 
+
 st.write("""
-#  Японские свечная диаграма для Apple Inc. Цена на акции
+#  Японския свечная диаграма для Apple Inc. Цена на акции c 30. 01 2022.
+(идея  нагло украдена у https://github.com/danchenkoEgor)
 """)
+
 tickerSymbol = 'AAPL'
 tickerData = yf.Ticker(tickerSymbol)
 tickerDf = tickerData.history(period='1m',interval='1mo', start='2022-01-30')
